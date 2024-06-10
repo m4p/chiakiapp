@@ -13,6 +13,7 @@ struct KeyCodeMap {
     static let standard = KeyCodeMap()
     
     init() {
+#if canImport(AppKit)
         map["a"] = KeyCode.a
         map["b"] = KeyCode.b
         map["c"] = KeyCode.c
@@ -133,6 +134,6 @@ struct KeyCodeMap {
         map["leftArrow"] = KeyCode.leftArrow
         map["rightArrow"] = KeyCode.rightArrow
         map["upArrow"] = KeyCode.upArrow
-
+#endif
     }
 }

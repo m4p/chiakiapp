@@ -6,11 +6,14 @@
 //
 
 import Foundation
+#if canImport(AppKit)
 import AppKit
+#else
+import UIKit
+typealias NSEvent = UIEvent
+#endif
+
 import GameController
-
-
-
 
 class InputState {
     var keyboard = KeyboardManager()
@@ -31,6 +34,7 @@ class InputState {
     }
     
     func setupMouse() {
+#if canImport(AppKit)
         events.monitor(matching: .leftMouseDown) { evt in
             self.mouse.onMouseEvent(button: .left, isDown: true)
             return evt
@@ -59,9 +63,11 @@ class InputState {
             self.mouse.onMouseMoved(evt: evt)
             return evt
         }
+#endif
     }
     
     func setupKeyboard() {
+#if canImport(AppKit)
         events.monitor(matching: .flagsChanged) { evt in
             let evt: NSEvent = evt
             self.keyboard.onFlagsChanged(evt: evt)
@@ -81,7 +87,8 @@ class InputState {
             self.keyboard.onKeyUp(evt: evt)
             return evt
         }
-
+#endif
+    
     }
     
     func run(_ inDeltaTime: CGFloat) -> ChiakiControllerState {
@@ -113,8 +120,10 @@ class MouseManager {
     var isRightDown = false
     
     func onMouseMoved(evt: NSEvent) {
+#if canImport(AppKit)
         mouseDeltaX = evt.deltaX
         mouseDeltaY = evt.deltaY
+#endif
     }
     
     func clear() {
@@ -526,12 +535,16 @@ class KeyboardManager {
     }
     
     func onKeyDown(evt: NSEvent) {
+#if canImport(AppKit)
         withLock {
             keyDowns.insert(evt.keyCode)
         }
+        #endif
     }
     
     func onFlagsChanged(evt: NSEvent) {
+#if canImport(AppKit)
+
         if evt.modifierFlags.contains(.shift) {
             withLock {
                 keyDowns.insert(KeyCode.shift)
@@ -541,13 +554,17 @@ class KeyboardManager {
                 keyDowns.remove(KeyCode.shift)
             }
         }
+        #endif
     }
     
     
     func onKeyUp(evt: NSEvent) {
+#if canImport(AppKit)
+
         withLock {
             keyDowns.remove(evt.keyCode)
         }
+        #endif
     }
 
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+#if canImport(Carbon)
 import Carbon
 
 struct KeyCode {
@@ -67,7 +68,7 @@ struct KeyCode {
     static let pageUp = UInt16(kVK_PageUp)
     static let end = UInt16(kVK_End)
     static let home = UInt16(kVK_Home)
-
+    
     static let f1 = UInt16(kVK_F1)
     static let f2 = UInt16(kVK_F2)
     static let f3 = UInt16(kVK_F3)
@@ -88,7 +89,7 @@ struct KeyCode {
     static let f18 = UInt16(kVK_F18)
     static let f19 = UInt16(kVK_F19)
     static let f20 = UInt16(kVK_F20)
-
+    
     static let apostrophe = UInt16(kVK_ANSI_Quote)
     static let backApostrophe = UInt16(kVK_ANSI_Grave)
     static let backslash = UInt16(kVK_ANSI_Backslash)
@@ -110,11 +111,11 @@ struct KeyCode {
     static let slash = UInt16(kVK_ANSI_Slash)
     static let space = UInt16(kVK_Space)
     static let tab = UInt16(kVK_Tab)
-
+    
     static let mute = UInt16(kVK_Mute)
     static let volumeDown = UInt16(kVK_VolumeDown)
     static let volumeUp = UInt16(kVK_VolumeUp)
-
+    
     static let command = UInt16(kVK_Command)
     static let rightCommand = UInt16(kVK_RightCommand)
     static let control = UInt16(kVK_Control)
@@ -130,3 +131,7 @@ struct KeyCode {
     static let rightArrow = UInt16(kVK_RightArrow)
     static let upArrow = UInt16(kVK_UpArrow)
 }
+
+#endif
+
+

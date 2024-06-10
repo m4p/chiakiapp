@@ -6,14 +6,22 @@
 //
 
 import Foundation
+#if canImport(AppKit)
 import Cocoa
+#else
+import UIKit
+#endif
 import SwiftUI
 import Combine
 import MetalKit
 import GameController
 import AVFoundation
 
+#if canImport(AppKit)
 class FastStreamWindow: NSViewController, NSMenuItemValidation {
+#else
+class FastStreamWindow: UIViewController {
+#endif
     
     var toDispose: [Any] = []
     

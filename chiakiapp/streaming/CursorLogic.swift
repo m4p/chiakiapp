@@ -6,7 +6,11 @@
 //
 
 import Foundation
+#if canImport(AppKit)
 import Cocoa
+#else
+import UIKit
+#endif
 
 class CursorLogic {
     

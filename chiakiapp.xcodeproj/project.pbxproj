@@ -11,7 +11,6 @@
 		AE59D9FA280F7F7900BEA772 /* LoginWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE59D9F9280F7F7900BEA772 /* LoginWindow.swift */; };
 		AE5A2F1027F2D6F500AFDC4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A2F0F27F2D6F500AFDC4D /* AppDelegate.swift */; };
 		AE5A2F1427F2D6F600AFDC4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE5A2F1327F2D6F600AFDC4D /* Assets.xcassets */; };
-		AE5A2F1727F2D6F600AFDC4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE5A2F1527F2D6F600AFDC4D /* Main.storyboard */; };
 		AE5A2F7427F2E4D100AFDC4D /* ChiakiBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5A2F7327F2E4D100AFDC4D /* ChiakiBridge.m */; };
 		AE5A2FE527F307D400AFDC4D /* ConsoleListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A2FE427F307D400AFDC4D /* ConsoleListView.swift */; };
 		AE5A2FE727F3E88E00AFDC4D /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5A2FE627F3E88E00AFDC4D /* AppModel.swift */; };
@@ -38,7 +37,6 @@
 		AE5A2F0C27F2D6F500AFDC4D /* chiakiapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chiakiapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE5A2F0F27F2D6F500AFDC4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE5A2F1327F2D6F600AFDC4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AE5A2F1627F2D6F600AFDC4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE5A2F1827F2D6F600AFDC4D /* chiakiapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = chiakiapp.entitlements; sourceTree = "<group>"; };
 		AE5A2F7227F2E4D000AFDC4D /* chiakiapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "chiakiapp-Bridging-Header.h"; sourceTree = "<group>"; };
 		AE5A2F7327F2E4D100AFDC4D /* ChiakiBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChiakiBridge.m; sourceTree = "<group>"; };
@@ -106,7 +104,6 @@
 				AE5A2FDC27F2FDA900AFDC4D /* libs */,
 				AE5A2F0F27F2D6F500AFDC4D /* AppDelegate.swift */,
 				AE5A2F1327F2D6F600AFDC4D /* Assets.xcassets */,
-				AE5A2F1527F2D6F600AFDC4D /* Main.storyboard */,
 				AE5A2F1827F2D6F600AFDC4D /* chiakiapp.entitlements */,
 				AE5A2F7227F2E4D000AFDC4D /* chiakiapp-Bridging-Header.h */,
 				AE5A2F7327F2E4D100AFDC4D /* ChiakiBridge.m */,
@@ -235,7 +232,6 @@
 			files = (
 				AE808252280674E700D57CD9 /* default-map.json in Resources */,
 				AE5A2F1427F2D6F600AFDC4D /* Assets.xcassets in Resources */,
-				AE5A2F1727F2D6F600AFDC4D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,17 +264,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AE5A2F1527F2D6F600AFDC4D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AE5A2F1627F2D6F600AFDC4D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AE5A2F1927F2D6F600AFDC4D /* Debug */ = {
@@ -408,12 +393,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XKGHA6BEPT;
+				DEVELOPMENT_TEAM = 863VD2347T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/chiaki/lib/include";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -433,12 +417,15 @@
 					"$(PROJECT_DIR)/chiaki/build/third-party/libgf_complete.a",
 					"$(PROJECT_DIR)/chiaki/build/third-party/nanopb/libprotobuf-nanopb.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = deckedstudios.chiakiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = wtf.map.chiakiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "chiakiapp/chiakiapp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
 			};
 			name = Debug;
 		};
@@ -454,12 +441,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_TEAM = XKGHA6BEPT;
+				DEVELOPMENT_TEAM = 863VD2347T;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/chiaki/lib/include";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,11 +465,14 @@
 					"$(PROJECT_DIR)/chiaki/build/third-party/libgf_complete.a",
 					"$(PROJECT_DIR)/chiaki/build/third-party/nanopb/libprotobuf-nanopb.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = deckedstudios.chiakiapp;
+				PRODUCT_BUNDLE_IDENTIFIER = wtf.map.chiakiapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx xros xrsimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "chiakiapp/chiakiapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 7;
 			};
 			name = Release;
 		};
